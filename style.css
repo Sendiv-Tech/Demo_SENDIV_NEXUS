@@ -19,7 +19,16 @@ body{font-family:'DM Sans',sans-serif;background:var(--white);color:var(--ink);f
 /* ─── HERO ─── */
 .hero{min-height:100vh;background:var(--ink);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;padding:7rem 1.5rem 4rem}
 .hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(201,146,42,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(201,146,42,.05) 1px,transparent 1px);background-size:55px 55px}
-.hero-watermark{position:absolute;top:50%;right:-4%;transform:translateY(-50%) rotate(-14deg);font-family:'Playfair Display',serif;font-size:clamp(6rem,18vw,16rem);font-weight:900;color:rgba(201,146,42,.035);white-space:nowrap;pointer-events:none}
+.hero-watermark{
+  position:absolute;
+  top:50%;
+  left:50%;
+  opacity:0.05; /* watermark effect */
+  pointer-events:none;
+  filter: blur(1px);
+  transform:translate(-50%, -50%) rotate(-10deg);
+  width:clamp(200px, 40vw, 500px);
+}
 .hero-content{max-width:800px;position:relative;z-index:2;text-align:center}
 .hero-pills{display:flex;gap:.5rem;flex-wrap:wrap;justify-content:center;margin-bottom:2rem}
 .pill{background:rgba(201,146,42,.12);border:1px solid rgba(201,146,42,.25);color:var(--gold);font-size:11.5px;font-weight:500;padding:.3rem .9rem;border-radius:99px}
